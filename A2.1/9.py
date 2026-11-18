@@ -3,9 +3,15 @@ list_num = [2, 7, 4, 2, 1, 6, 3, 7, 6, 10]
 list_ordenada = []
 #1.Intenta fer el teu algoritme cercant els mínims de la llista
 
-list_num1 = list_num.copy()  
+list_num1 = list_num.copy()
+
 while len(list_num1) > 0:
-    minimo = min(list_num1)
+    minimo = list_num1[0]
+
+    for x in list_num1:
+        if x < minimo:
+            minimo = x
+
     list_ordenada.append(minimo)
     list_num1.remove(minimo)
 
